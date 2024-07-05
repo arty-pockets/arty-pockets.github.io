@@ -101,7 +101,7 @@ def generateFileList(fileList, filename):
 ];
 """ % ',\n  '.join([repr(repoRelativePath(f)) for f in fileList]))
 
-def run():
+def main():
   print("Downloading updates from GitHub...")
   git("checkout", "main")
   git("fetch", "origin", "main")
@@ -145,11 +145,11 @@ def run():
   print()
   print("Uploading updates to GitHub...")
   git('add', fileListJs, *(img.filename for img in newImages))
-  git('commit', '-m', ', '.join(msgs))
+  git('commit', '-m', msgs.join(', '))
   git('push', 'origin', 'main')
 
   print()
   print("Portfolio updated successfully :)")
   print("The site may take 5-10 minutes to show the changes")
 
-run()
+main()
