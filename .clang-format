@@ -1,0 +1,7 @@
+---
+Language: JavaScript
+BasedOnStyle: Google
+AllowShortIfStatementsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+AlignTrailingComments: false
+...
