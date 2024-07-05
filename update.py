@@ -144,7 +144,7 @@ def main():
 
   print()
   print("Uploading updates to GitHub...")
-  git('add', fileListJs, *(img.filename for img in newImages))
+  git('add', fileListJs, *(img.filename for img in newImages), *deletableImages)
   git('commit', '-m', ', '.join(msgs))
   git('push', 'origin', 'main')
 
