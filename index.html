@@ -24,7 +24,7 @@ body {
 .header-row {
   gap: 16px;
   background-color: #B5E2FA;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
   border-radius: 16px;
   padding: 0 16px;
   margin: 16px 0 24px 0;
@@ -55,51 +55,12 @@ album-view.loading {
 
 album-view img {
   border-radius: 16px;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
   transition: all 0.3s ease-in-out;
 }
 album-view img:hover {
   border-radius: 0;
   transform: scale(1.2);
-}
-
-.loader {
-  font-size: 10px;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999em;
-  animation: mulShdSpin 1.1s infinite ease;
-  transform: translateZ(0);
-  margin: 100px;
-}
-@keyframes mulShdSpin {
-  0%,
-  100% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.5), -1.8em -1.8em 0 0em rgba(168,163,153, 0.7);
-  }
-  12.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.7), 1.8em -1.8em 0 0em rgba(168,163,153), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.5);
-  }
-  25% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.5), 1.8em -1.8em 0 0em rgba(168,163,153, 0.7), 2.5em 0em 0 0em rgba(168,163,153), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
-  }
-  37.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.5), 2.5em 0em 0 0em rgba(168,163,153, 0.7), 1.75em 1.75em 0 0em rgba(168,163,153), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
-  }
-  50% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.5), 1.75em 1.75em 0 0em rgba(168,163,153, 0.7), 0em 2.5em 0 0em rgba(168,163,153), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
-  }
-  62.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.5), 0em 2.5em 0 0em rgba(168,163,153, 0.7), -1.8em 1.8em 0 0em rgba(168,163,153), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
-  }
-  75% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.5), -1.8em 1.8em 0 0em rgba(168,163,153, 0.7), -2.6em 0em 0 0em rgba(168,163,153), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
-  }
-  87.5% {
-    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.5), -2.6em 0em 0 0em rgba(168,163,153, 0.7), -1.8em -1.8em 0 0em rgba(168,163,153);
-  }
 }
 </style>
 
@@ -108,7 +69,7 @@ album-view img:hover {
 <script src="https://tiusic.com/lib/hitcount.js"></script>
 <script type="text/javascript">
 window.addEventListener(
-    'load', () => hitCountRequest('arty-pockets.com', 'sfjhdfsg'));
+    'load', () => hitCountRequest('arty-pockets.com', '1og2ljebva4y0'));
 </script>
 
 </head>
