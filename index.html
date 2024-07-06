@@ -4,7 +4,102 @@
 <title>Arty Pockets</title>
 <link rel="icon" href="res/favicon.ico">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
 <style>
+body {
+  background-color: #F9F7F3;
+}
+
+.header, .header-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.header-row {
+  gap: 16px;
+  background-color: #B5E2FA;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 0 16px;
+  margin: 16px 0 24px 0;
+  width: fit-content;
+}
+h1 {
+  font-size: 4em;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  color: #09646C;
+}
+.header-row img {
+  height: 100px;
+}
+
+album-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 16px;
+}
+album-view.loading {
+}
+
+album-view img {
+  border-radius: 16px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+album-view img:hover {
+  border-radius: 0;
+  transform: scale(1.2);
+}
+
+.loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+  margin: 100px;
+}
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.5), -1.8em -1.8em 0 0em rgba(168,163,153, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.7), 1.8em -1.8em 0 0em rgba(168,163,153), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.5), 1.8em -1.8em 0 0em rgba(168,163,153, 0.7), 2.5em 0em 0 0em rgba(168,163,153), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.5), 2.5em 0em 0 0em rgba(168,163,153, 0.7), 1.75em 1.75em 0 0em rgba(168,163,153), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.5), 1.75em 1.75em 0 0em rgba(168,163,153, 0.7), 0em 2.5em 0 0em rgba(168,163,153), -1.8em 1.8em 0 0em rgba(168,163,153, 0.2), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.5), 0em 2.5em 0 0em rgba(168,163,153, 0.7), -1.8em 1.8em 0 0em rgba(168,163,153), -2.6em 0em 0 0em rgba(168,163,153, 0.2), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.5), -1.8em 1.8em 0 0em rgba(168,163,153, 0.7), -2.6em 0em 0 0em rgba(168,163,153), -1.8em -1.8em 0 0em rgba(168,163,153, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(168,163,153, 0.2), 1.8em -1.8em 0 0em rgba(168,163,153, 0.2), 2.5em 0em 0 0em rgba(168,163,153, 0.2), 1.75em 1.75em 0 0em rgba(168,163,153, 0.2), 0em 2.5em 0 0em rgba(168,163,153, 0.2), -1.8em 1.8em 0 0em rgba(168,163,153, 0.5), -2.6em 0em 0 0em rgba(168,163,153, 0.7), -1.8em -1.8em 0 0em rgba(168,163,153);
+  }
+}
 </style>
 
 <script src="lib/albumFiles.js"></script>
@@ -18,7 +113,13 @@ window.addEventListener(
 </head>
 
 <body>
-<h1>Arty Pockets</h1>
+<div class="header">
+  <div class="header-row">
+    <img src="res/Arty_Pockets.png">
+    <h1>Arty Pockets</h1>
+    <img src="res/Arty_Pockets.png">
+  </div>
+</div>
 <album-view></album-view>
 </body>
 
