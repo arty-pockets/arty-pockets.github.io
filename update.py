@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-# TODO: Make sure this script works by just double clicking.
-
 import os
 import shlex
 import subprocess
