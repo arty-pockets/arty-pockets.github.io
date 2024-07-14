@@ -13,6 +13,11 @@ suffixDelim = "="
 downloadSuffix = "=w1024-h1024-no"
 imageExt = ".jpg"
 
+def quit(code):
+    print("Press ENTER to quit...")
+    input()
+    exit(code)
+
 def path(*args):
   return os.path.abspath(os.path.join(*args))
 
@@ -32,7 +37,7 @@ def run(args):
     print(result.stdout)
     print("Exit code: %s" % result.returncode)
     print()
-    exit(1)
+    quit(1)
 
 def git(*args):
   run(['git', *args])
@@ -48,7 +53,7 @@ def getBytes(url):
       if retries >= 3:
         print("Downloading from URL %s failed:\n%s" % (url, e))
         print()
-        exit(1)
+        quit(1)
 
 def getUtf8(url):
   return getBytes(url).decode("utf-8")
@@ -127,7 +132,7 @@ def main():
     print("No new images to download")
 
   if len(msgs) == 0:
-    exit(0)
+    quit(0)
   msgs.append(time.strftime("%Y-%m-%d"))
 
   print()
@@ -149,5 +154,6 @@ def main():
   print()
   print("Portfolio updated successfully :)")
   print("The site may take 5-10 minutes to show the changes")
+  quit(0)
 
 main()
