@@ -10,36 +10,19 @@
 
 <style>
 body {
-  background-color: #F9F7F3;
-  background-image: url("res/damask.png");
+  background-color: #e0c0c0;
 }
 
-.header, .header-row {
+.header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  padding-bottom: 24px;
 }
-.header-row {
-  gap: 16px;
-  background-color: #B5E2FA;
-  box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
-  border-radius: 16px;
-  padding: 0 16px;
-  margin: 16px 0 24px 0;
-  width: fit-content;
-}
-h1 {
-  font-size: 4em;
-  font-family: "Indie Flower", cursive;
-  font-weight: bold;
-  font-style: normal;
-  text-align: center;
-  color: #09646C;
-}
-.header-row img {
-  height: 100px;
+.header img {
+  height: 450px;
 }
 
 album-view {
@@ -76,11 +59,7 @@ window.addEventListener(
 
 <body>
 <div class="header">
-  <div class="header-row">
-    <img src="res/Arty_Pockets.png">
-    <h1>Arty Pockets</h1>
-    <img src="res/Arty_Pockets.png">
-  </div>
+  <img src="res/Arty_Pockets_Title.png">
 </div>
 <album-view></album-view>
 </body>

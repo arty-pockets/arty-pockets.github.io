@@ -127,7 +127,7 @@ def main():
       os.remove(f)
 
   if len(newImages) > 0:
-    msgs.append("Added %s" % len(deletableImages))
+    msgs.append("Added %s" % len(newImages))
   else:
     print("No new images to download")
 
