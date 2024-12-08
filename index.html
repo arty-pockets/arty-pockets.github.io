@@ -3,11 +3,6 @@
 <head>
 <title>Arty Pockets</title>
 <link rel="icon" href="res/favicon.ico">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-
 <style>
 body {
   background-color: #e0c0c0;
@@ -18,13 +13,23 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding-bottom: 24px;
 }
-.header img {
+.title {
   height: 450px;
 }
-
+a {
+  text-decoration: none;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact a img {
+  width: 32px;
+  height: 32px;
+}
 album-view {
   display: flex;
   flex-direction: row;
@@ -35,7 +40,6 @@ album-view {
 }
 album-view.loading {
 }
-
 album-view img {
   border-radius: 16px;
   box-shadow: 8px 8px 8px rgba(0,0,0,0.3);
@@ -59,7 +63,15 @@ window.addEventListener(
 
 <body>
 <div class="header">
-  <img src="res/Arty_Pockets_Title.png">
+  <img src="res/Arty_Pockets_Title.png" class="title">
+  <div class="contact">
+    <a href="https://www.instagram.com/pocket_travellers">
+      <img src="res/instagram.png">
+    </a>
+    <a href="mailto:ava.artypockets@gmail.com">
+      <img src="res/gmail.png">
+    </a>
+  </div>
 </div>
 <album-view></album-view>
 </body>
